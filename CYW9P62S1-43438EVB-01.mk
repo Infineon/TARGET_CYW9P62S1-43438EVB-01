@@ -6,7 +6,9 @@
 #
 ################################################################################
 # \copyright
-# Copyright 2019-2021 Cypress Semiconductor Corporation
+# Copyright 2019-2021 Cypress Semiconductor Corporation (an Infineon company) or
+# an affiliate of Cypress Semiconductor Corporation
+#
 # SPDX-License-Identifier: Apache-2.0
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -30,7 +32,7 @@ endif
 include $(dir $(lastword $(MAKEFILE_LIST)))/locate_recipe.mk
 
 # MCU device selection
-#    Changing the device should be done using “make bsp” or “make update_bsp” with the “DEVICE_GEN”
+#    Changing the device should be done using "make bsp" or "make update_bsp" with the "DEVICE_GEN"
 #    variable set to the new MCU. If you change the device manually here you must also update the
 #    design.modus file and re-run the device configurator.
 DEVICE:=CY8C6247BZI-D54
@@ -46,7 +48,10 @@ COMPONENTS+=$(TARGET) CAT1 CAT1A
 
 ifeq ($(CORE),CM4)
 # Additional components supported by the target
-COMPONENTS+=CM0P_SLEEP BSP_DESIGN_MODUS PSOC6HAL UDB_SDIO_P2 43438 AW_CU427
+# 4343W is deliberately used even though this board has a radio in the 43438 family. This is
+# because the two radios use the same firmware, so WHD 2.0 and higher only ship a single
+# copy under the 4343W component.
+COMPONENTS+=CM0P_SLEEP BSP_DESIGN_MODUS PSOC6HAL UDB_SDIO_P2 4343W AW-CU427-P HCI-UART
 # Use CyHAL & UDB based SDIO
 DEFINES+=CY_USING_HAL CYHAL_UDB_SDIO
 endif
