@@ -48,10 +48,7 @@ COMPONENTS+=$(TARGET) CAT1 CAT1A
 
 ifeq ($(CORE),CM4)
 # Additional components supported by the target
-# 4343W is deliberately used even though this board has a radio in the 43438 family. This is
-# because the two radios use the same firmware, so WHD 2.0 and higher only ship a single
-# copy under the 4343W component.
-COMPONENTS+=CM0P_SLEEP BSP_DESIGN_MODUS PSOC6HAL UDB_SDIO_P2 4343W AW-CU427-P HCI-UART
+COMPONENTS+=CM0P_SLEEP BSP_DESIGN_MODUS PSOC6HAL UDB_SDIO_P2 43438 AW-CU427-P HCI-UART
 # Use CyHAL & UDB based SDIO
 DEFINES+=CY_USING_HAL CYHAL_UDB_SDIO
 endif
