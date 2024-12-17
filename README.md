@@ -2,7 +2,7 @@
 
 ## Overview
 
-The CYW9P62S1-43438EVB-01 Kit is a low-cost hardware platform that enables design and debug of the Azurewave AW-CU427 Module. AW-CU427 is a System in Package (SiP) module that contains the MCU part, PSoC™ 62 MCU (CY8C6247BZI-D54) and the radio part CYW43438 ( WiFi + Bluetooth Combo Chip).
+The CYW9P62S1-43438EVB-01 Kit is a low-cost hardware platform that enables design and debug of the Azurewave AW-CU427 Module. AW-CU427 is a System in Package (SiP) module that contains the MCU part, PSOC™ 62 MCU (CY8C6247BZI-D54) and the radio part CYW43438 ( WiFi + Bluetooth Combo Chip).
 
 ![](docs/html/board.png)
 
@@ -21,7 +21,7 @@ To use code from the BSP, simply include a reference to `cybsp.h`.
 
 ### Kit Contents:
 
-* PSoC™ 6S2 Wi-Fi BT Pioneer Board
+* PSOC™ 6S2 Wi-Fi BT Pioneer Board
 * USB Type-A to Micro-B cable
 * Quick Start Guide
 * Four jumper wires (4 inches each)
